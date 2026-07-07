@@ -1,0 +1,167 @@
+.volunteering {
+  padding: clamp(5rem, 10vh, 8rem) 0;
+  overflow: hidden;
+}
+
+.volunteering__container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  min-height: 480px;
+}
+
+.volunteering__main {
+  flex: 1;
+  min-width: 0;
+  transition: transform 0.5s var(--ease);
+}
+
+.volunteering__main--shifted {
+  transform: translateX(-2%);
+}
+
+.volunteering__heading {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin: 0.6rem 0 2.5rem;
+}
+
+.volunteering__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.volunteering__row-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.6rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  transition: border-color 0.35s var(--ease), background 0.35s var(--ease), transform 0.35s var(--ease);
+  text-align: left;
+}
+
+.volunteering__row-btn:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.volunteering__row--active .volunteering__row-btn {
+  border-color: var(--accent);
+  background: var(--accent-softer);
+}
+
+.volunteering__row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.volunteering__org {
+  font-weight: 800;
+  font-size: 1.02rem;
+}
+
+.volunteering__role {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.volunteering__toggle {
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.35s var(--ease);
+}
+
+.volunteering__row--active .volunteering__toggle {
+  transform: rotate(90deg);
+}
+
+.volunteering__card {
+  width: min(38%, 420px);
+  flex-shrink: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--bg-elevated);
+  position: sticky;
+  top: calc(var(--nav-h) + 20px);
+}
+
+.volunteering__card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.volunteering__card-body {
+  padding: 1.6rem 1.75rem 1.9rem;
+}
+
+.volunteering__card-duration {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.05rem;
+}
+
+.volunteering__card-org {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.volunteering__card-role {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.volunteering__card-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.volunteering__vertical {
+  position: absolute;
+  right: -18px;
+  top: 0;
+  writing-mode: vertical-rl;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: var(--accent-soft);
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .volunteering__container {
+    flex-direction: column;
+  }
+  .volunteering__vertical {
+    display: none;
+  }
+  .volunteering__card {
+    width: 100%;
+    position: static;
+  }
+  .volunteering__main--shifted {
+    transform: none;
+  }
+}

@@ -1,0 +1,35 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02rem;
+  transition: box-shadow 0.35s var(--ease), border-color 0.35s var(--ease), color 0.35s var(--ease);
+  will-change: transform;
+}
+
+.btn--solid {
+  background: var(--accent);
+  color: #111111;
+  box-shadow: 0 8px 30px rgba(250, 155, 207, 0.35);
+}
+
+.btn--solid:hover {
+  box-shadow: 0 12px 40px rgba(250, 155, 207, 0.5);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+
+.btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
