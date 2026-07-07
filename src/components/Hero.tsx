@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Button from './Button';
+import '../img/imandi.jpg';
 import '../css/Hero.css';
 
 export default function Hero() {
@@ -27,7 +28,7 @@ export default function Hero() {
 
         <div className="hero__content">
           <div className="hero__photo">
-            {/* <img src="https://picsum.photos/seed/sarika-profile/700/900" alt="Portrait of Sarika Imandi Kariyapperuma" /> */}
+            <img src="src/img/imandi.jpg" alt="Portrait of Sarika Imandi Kariyapperuma" />
           </div>
 
           <div className="hero__intro">
